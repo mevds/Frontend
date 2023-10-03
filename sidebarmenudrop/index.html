@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<!--icons-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/flatly/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="./css/styles.css">
+<title>Title</title>
+</head>
+<body>
+    <div class="navigation">
+        <div class="logo-details">
+            <i class='bx bxl-google-cloud alt'></i>
+            <span class="logo_name">TechDev</span>
+        </div>
+        <ul>
+            <li class="list active">
+                <b></b>
+                <b></b>
+                <a href="#"> 
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Home</i></span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="list-outline"><ion-icon name="list-sharp"></ion-icon></span>
+                    <span class="title">Cadastros</span>
+                </a>
+                <!--submenu-->
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="grid-outline"></ion-icon></span>
+                    <span class="title">Lançamentos</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="search-outline"></ion-icon></span>
+                    <span class="title">Consultas</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="title">configurações</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="title">Usuários</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    <span class="title">Senha</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Logout</span>
+                </a>
+            </li>
+       </ul>
+    </div>
+    <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-circle-outline" class="close"></ion-icon>
+    </div>
+
+<!--scripts-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+<script>
+//add toggle
+let menuToggle = document.querySelector('.toggle');
+let navigation = document.querySelector('.navigation');
+
+menuToggle.onclick = function() {
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+
+}
+
+// add selectd active item
+    let list = document.querySelectorAll('.list');
+    for(let i = 0; i<list.length;i++){
+        list[i].onclick = function(){
+            let j =0;
+            while(j < list.length){
+                list[j++].className ='list';
+            }
+            list[i].className = 'list active';
+        }
+    }
+</script>
+</body>
+</html>
