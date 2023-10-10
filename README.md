@@ -1,3 +1,3 @@
 # Web
-## Projetos desenvolvido usando Html - CSS e Javascript
+## Projetos desenvolvidos usando Html - CSS e Javascript
 
